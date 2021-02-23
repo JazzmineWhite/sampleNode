@@ -6,7 +6,7 @@
   <style>
     body {
       color: #ffffff;
-      background-color: #0188cc;
+      background-color: #f26bc7;
       font-family: Arial, sans-serif;
       font-size: 14px;
     }
@@ -22,13 +22,56 @@
       font-weight: normal;
       margin-bottom: 0;
     }
+    img {
+  height: 20%;
+  width: 30%;
+  padding: 3%;
+    }
+  #left {
+    width: 50%;
+    background: lightblue;
+    display: inline-block;
+    height: 100%;
+    margin: auto;
+}
+#right {
+    width: 50%;
+    background: orange;
+    display: inline-block;
+    height: 100%;
+}
+.parent{
+    display: flex;
+    width: 50%;
+    padding-top:1%;
+}
   </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+$(document).ready(function(){
+$('#imgDiv').hide();
+$('#btn1').click(function(){
+    $('#imgDiv').show();
+});
+$('#btn2').click(function(){
+    $('#imgDiv').hide();
+});
+});
+</script>
+
 </head>
 <body>
   <div align="center">
-    <h1>Waaw, Congratulations Jazzmine you did it...</h1>
+    <h1>Yay It's Working</h1>
     <h2>This application was deployed using AWS CodeDeploy.</h2>
-    <p>For next steps, read the <a href="http://aws.amazon.com/documentation/codedeploy">AWS CodeDeploy Documentation</a>.</p>
+    <div class="parent">
+    <img src="img1.jpg" id="left"alt="Show/Hide Image" />
+      <!-- <img src="img2.jpg" id="right" alt="Show/Hide Image" /> -->
+      </div>
+    </div>
+    <button type="button" id="btn1">Show</button>
+    <button type="button" id="btn2">Hide</button>
   </div>
 </body>
 </html>
